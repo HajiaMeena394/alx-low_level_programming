@@ -3,8 +3,9 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (Succes)
  */
+
 int main(void)
 {
 	int tho;
@@ -12,19 +13,30 @@ int main(void)
 	int ten;
 	int bas;
 
-	for (tho = 0; tho < 10; tho++)
+for (tho = 0 ; tho < 10 ; tho++)
+{
+
+	for (hun = 0 ; hun <= 10 ; hun++)
 	{
-		for (hun = 0; hun < 10; hun++)
+		for (ten = 0 ; ten < 10 ; ten++)
 		{
-			for (ten = 0; ten < 10; ten++)
+			for (bas = 0 ; bas < 10 ; bas++)
 			{
-				for (bas = 0; bas < 10; bas++)
+				putchar('0' + tho);
+				putchar('0' + hun);
+				putchar(32);
+				putchar('0' + ten);
+				putchar('0' + bas);
+				if (!(tho == 9 && hun == 8))
 				{
-					printf("%02d %02d, ", tho * 100 + hun * 10 + ten, ten * 10 + bas);
+					putchar(',');
+					putchar(32);
 				}
+				bas++;
 			}
 		}
 	}
+}
 	putchar('\n');
 	return (0);
 }
